@@ -62,12 +62,12 @@ const ComposeMail = ({ setOpen, open }) => {
     const sentEmailService = useApi(API_URLS.saveSentEmail)
     const saveDraftEmail = useApi(API_URLS.saveDraftEmails)
 
-    const accountHolderEmail = process.env.REACT_APP_YOUR_EMAIL
+    const accountHolderEmail = "ragav5566@gmail.com";
 
     const config = {
         Host: "smtp.elasticemail.com",
-        Username: process.env.REACT_APP_USERNAME,
-        Password: process.env.REACT_APP_PASSWORD,
+        Username: "Ragav",
+        Password: "guvi",
         Port: 2525
     }
 
@@ -91,12 +91,12 @@ const ComposeMail = ({ setOpen, open }) => {
             subject: data.subject,
             body: data.body,
             date: new Date(),
-            image: '',
-            name: 'Aadarsh Guru',
-            starred: false,
+            // image: '',
+            name: 'Ragavan',
+            // starred: false,
             type: 'sent'
         }
-
+       console.log(payload);
         sentEmailService.call(payload)
 
         if (!sentEmailService.error) {
@@ -116,13 +116,13 @@ const ComposeMail = ({ setOpen, open }) => {
     const closeComposeMail = () => {
         const payload = {
             to: data.to,
-            from: 'aadarshkumar8871860855@gmail.com',
+            from: 'ragav555666@gmail.com',
             subject: data.subject,
             body: data.body,
             date: new Date(),
-            image: '',
-            name: 'Aadarsh Guru',
-            starred: false,
+            //image: '',
+            name: 'Ragavan',
+            //starred: false,
             type: 'drafts'
         }
 

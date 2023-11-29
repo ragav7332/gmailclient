@@ -13,7 +13,8 @@ const useApi = (urlObject) => {
         setIsLoading(true)
         try {
             const res = await API(urlObject, payload, type)
-            setResponse(res.data)
+           setResponse(res.data)
+           console.log(res);
         } catch (error) {
             setError(error.message)
         } finally {
